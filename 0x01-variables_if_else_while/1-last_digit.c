@@ -5,7 +5,7 @@
  * to determnine if last difit of random number is
  * greater or less than 5 or 0
  * Return: 0 if sucess
- */
+*/
 
 int main(void)
 {
@@ -28,4 +28,6 @@ int main(void)
 		printf("less than 6 and not 0\n");
 	}
 	return (0);
+
 }
+
