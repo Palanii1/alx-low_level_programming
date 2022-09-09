@@ -1,12 +1,12 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/**
- * main - determnine if last difit of random number is
- * greater or less than 5 or 0
- * Return: 0 if sucess
-*/
 
+/**
+ * main - assigns random number in order to print last digit
+ * of the number stored in n
+ * Return: Always 0 (on success) 
+*/
 int main(void)
 {
 	int n;
@@ -15,17 +15,10 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	printf("Last digit of %d is %d ", n, n % 10);
 	if (n % 10 > 5)
-	{
-		printf("greater than 5\n");
-	}
+		printf("is greater than 5\n");
 	if (n % 10 == 0)
-	{
 		printf("is 0\n");
-	}
 	if (n % 10 < 6 && n % 10 != 0)
-	{
-		printf("less than 6 and not 0\n");
-	}
+		printf("is less than 6 and not 0\n");
 	return (0);
-
 }
