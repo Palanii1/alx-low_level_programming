@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 /**
- * to determnine if last difit of random number is
+ * main - determnine if last difit of random number is
  * greater or less than 5 or 0
  * Return: 0 if sucess
 */
@@ -30,4 +30,3 @@ int main(void)
 	return (0);
 
 }
-

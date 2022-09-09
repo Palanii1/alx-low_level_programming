@@ -1,5 +1,6 @@
 #include <stdio.h>
-/** main- entry block
+/** 
+ * main - entry block
  * @void: no arguemnt
  * Return: 0
 */
