@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-/** 
+/**
  * main - entry block
- * @void: no arguemnt
+ * @void: no argument
  * Return: 0
-*/
+**/
 int main(void)
 {
 	char c;

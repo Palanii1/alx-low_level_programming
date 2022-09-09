@@ -1,5 +1,5 @@
 #include <stdio.h>
-/** 
+/**
  * main - entry block
  * @void: no arguemnt
  * Return: 0
