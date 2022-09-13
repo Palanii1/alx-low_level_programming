@@ -2,6 +2,7 @@
 
 /**
  * _isalpha - checks for alphabetic character
+ * @c: int char type
  * Return: 1 if c is a lowe or uppercase letter, 0 if otherwise
 */
 

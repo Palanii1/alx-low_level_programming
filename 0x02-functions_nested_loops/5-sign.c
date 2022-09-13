@@ -2,13 +2,13 @@
 
 /**
  * print_sign - prints the sign of a number
+ * @n: int character, positive or negative
  * description - print + if n > 0, 0 if n = 0, - n < 0
  * Return: +, 0 , - if > = < 0
 */
 
 int print_sign(int n)
-{
-	
+{	
 	if (n > 0)
 	{
 		_putchar('+');
@@ -24,4 +24,4 @@ int print_sign(int n)
 		_putchar('0');
 		return (0);
 	}
-}	
+}
