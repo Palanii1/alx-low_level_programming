@@ -2,6 +2,7 @@
 
 /**
  * print_last_digit - prints the last digit of a number
+ * @n: int type number
  * Return: value of the last digit
 */
 
@@ -15,7 +16,7 @@ int print_last_digit(int n)
 		_putchar(ldn + '0');
 		return (ldn);
 	}
-	else 
+	else
 	{
 		ldn = n % 10;
 		_putchar(ldn + '0');
