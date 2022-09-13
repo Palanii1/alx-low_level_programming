@@ -10,3 +10,8 @@ program 9 a function that prints every minute of the day of Jack Bauer, starting
 program 10 is a function that prints the 9 times table, starting with 0
 program 11 is a function that adds two integers and returns the result.
 program 12 is function that prints all natural numbers from n to 98, followed by a new line. Numbers must be separated by a comma, followed by a space and printed in order. The first printed number should be the number passed to your function. The last printed number should be 98
+program 13 prints the n times table, starting with 0.
+program 14 computes and prints the sum of all the multiples of 3 or 5 below 1024 (excluded), followed by a new line.
+program 15 prints the first 50 Fibonacci numbers, starting with 1 and 2, followed by a new line.
+program 16 write a program that finds and prints the sum of the even-valued terms, n the Fibonacci sequence whose values do not exceed 4,000,000 followed by a new line.
+program 17 finds and prints the first 98 Fibonacci numbers, starting with 1 and 2, followed by a new line
