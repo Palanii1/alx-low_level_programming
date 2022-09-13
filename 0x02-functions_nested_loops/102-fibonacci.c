@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints first 50 fibonacci numbers including 1,2 
+ * main - prints first 50 fibonacci numbers including 1,2
  * Description - must be sepereated by , and white space
  * Return: 0
 */

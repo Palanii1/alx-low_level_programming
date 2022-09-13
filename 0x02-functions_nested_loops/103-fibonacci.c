@@ -3,6 +3,7 @@
 /**
  * main - find and prints the sum of even-valued fibonacci terms
  * Description - values should not exceed 4,000,000
+ * Return: 0
  */
 
 int main(void)
@@ -22,6 +23,5 @@ int main(void)
 		a = c;
 	}
 	printf("%d\n", sum);
-	
 	return (0);
 }
