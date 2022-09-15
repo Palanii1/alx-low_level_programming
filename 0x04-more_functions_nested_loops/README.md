@@ -9,3 +9,5 @@ Program 8 draws a diagonal line on the terminal
 Program 9 prints a square, followed by a new line
 Program 10 prints the numbers from 1 to 100, followed by a new line. But for multiples of three print Fizz instead of the number and for the multiples of five print Buzz. For numbers which are multiples of both three and five print FizzBuzz
 Program 11 prints a triangle, followed by a new line
+Program 12 finds and prints the largest prime factor of the number 612852475143, followed by a new line
+Program 13 prints an integer
