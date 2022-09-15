@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * prints_numbers - prints numbers 0-9
+ * print_numbers - prints numbers 0-9
  * Return: print the alphabet in lowercase to stdout, then new line
  */
 

@@ -2,8 +2,8 @@
 
 /**
  * _isdigit - Returns 1 if c is a digit
- * @c: character
- * Return: 0 for uppercase, 1 lowercase
+ * @c: takes in a character
+ * Return: 1 for digit, 1 otherwise
  */
 
 int _isdigit(int c)
