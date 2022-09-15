@@ -6,11 +6,11 @@
  * from a particular given date, leap years included
  * @month: month, number format
  * @day: day of the month
- * @years: year
+ * @year: year
  * Return: void
  */
 
-void print_remaining_days(int day, int month, int year)
+void print_remaining_days(int month, int day, int year)
 {
 	if (year % 4 == 0 || ((year % 100 == 0) && (year % 400 == 0)))
 	{
