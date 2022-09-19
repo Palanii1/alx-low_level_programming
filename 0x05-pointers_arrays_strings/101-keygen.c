@@ -15,7 +15,7 @@ int main(void)
 
 	time_t t;
 
-	srand((unsigned int) time(&t))
+	srand((unsigned int) time(&t));
 	
 	while (j < 2772)
 	{
@@ -24,7 +24,7 @@ int main(void)
 			break;
 		j += i;
 		k++;
-		printf("%c", i)
+		printf("%c", i);
 	}
 	printf("%c\n", (2772 - j));
 	return (0);
