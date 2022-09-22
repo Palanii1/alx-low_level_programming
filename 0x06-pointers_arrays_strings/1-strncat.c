@@ -5,7 +5,7 @@
  * @dest: a string
  * @src: a string
  * @n: number of bytes from src
- * Return: a pointer to string dest
+ * Return: a pointer to resulting string dest
  */
 
 char *_strncat(char *dest, char *src, int n)
@@ -13,7 +13,7 @@ char *_strncat(char *dest, char *src, int n)
 	int a;
 	int b;
 
-	if (n <= '0')
+	if (n <= 0)
 	{
 		return (dest);
 	}

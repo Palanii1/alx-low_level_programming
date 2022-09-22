@@ -11,7 +11,7 @@ char *leet(char *str)
 	int a;
 	int b;
 
-	char z[] = "asdz1ghjk8";
+	char z[] = "a4e3o0t7l1";
 
 	a = 0;
 	b = 0;
