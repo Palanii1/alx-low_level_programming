@@ -1,39 +1,34 @@
 #include "main.h"
 
 /**
- * _strlen - calculate string length
+ * _strlen - calcluates string length
  * @a: string
-<<<<<<<<<<<< HEAD
  * Return: lenght of string
-============
- * Return: lenght
->>>>>> 66a7e64280d884ae783b6ff5258e667ccd7a2047
-*/
+ */
 
 int _strlen(char *a)
 {
 	int i = 0;
 
 	while (*a != '\0')
+	{
 		i++, a++;
+	}
 	return (i);
 }
 
 /**
  * *infinite_add - adds two numbers
-<<<<<<< HEAD
  * @n1: string
  * @n2: string
  * @r: string
  * @size_r: int
  * Return: 0
-===========
- * @n1: number1
- * @n2: number2
- * @r: buffer to store result
- * @size_r: buffer size
- * Return: pointer to the result
->>>>>> 66a7e64280d884ae783b6ff5258e667ccd7a2047
+ * @n1: first number
+ * @n2: second number
+ * @r: buffer that stores result
+ * @size_r:buffer size
+ * Return: pointer to result
  */
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
@@ -46,14 +41,16 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	n1_s = _strlen(n1);
 	n2_s = _strlen(n2);
 	size_r--;
-	if (n1_s > size_r || n2_s > size_r || size_r == 0 ||
-		 (n1_s == size_r && n2_s == size_r && 
-		  (n1[0] - '0') + (n2[0] - '0') > 9))
+
+	if (n1_s > size_r || n2_s > size_r || size_r == 0 || 
+			(n1_s == size_r && n2_s == size_r && 
+			 (n1[0] - '0') + (n2[0] - '0') > 9))
 	{
 		return (0);
 	}
 	n1_s--;
 	n2_s--;
+
 	while (n1_s >= 0 || n2_s >= 0)
 	{
 		if (n1_s < 0)
@@ -72,6 +69,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		return (r + size_r);
 	}
 	else if (k == 0)
+	{
 		return (r + size_r);
+	}
 	return (0);
 }
