@@ -10,28 +10,42 @@
 
 void print_buffer(char *b, int size)
 {
-	int c, d;
+	int num, a, c, i;
 
-	c = 0;
-	if (size <= 0)
+	if (size % 10 == 0)
+		num = size / 10;
+	else if (size % 10 > 0)
+		num = (size / 10) + 1;
+	else
+		num = 0;
+	a = 0;
+	i = 1;
+	while (i <= num)
 	{
-		printf("\n");
-	}
-
-	while (c < size)
-	{
-		printf("%8.8x:", c);
-		d = 0;
-		while (d < 10)
-		{
-			printf("%02x", b[c + d]);
-			if ((d % 2 == 0 && d != 0) || (c + d > size - 1))
-			{
+		c = a;
+		printf("%08x: ", a);
+		do {
+			if (a < size)
+				printf("%02x", b[a]);
+			else
 				printf(" ");
+			if ((a + 1) % 2 == 0)
+				printf(" ");
+			a++;
+		} while (a % 10 != 0);
+		do {
+			if (c < size)
+			{
+				if (b[c] >= 32 && b[c] <= 126)
+					printf("%c", b[c]);
+				else
+					printf(".");
 			}
-			d++;
-		}
-		c += 10;
+			c++;
+		} while (c % 10 != 0);
 		printf("\n");
+		i++;
 	}
+	if (size <= 0)
+		printf("\n");
 }
