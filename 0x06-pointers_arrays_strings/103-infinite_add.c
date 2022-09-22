@@ -19,6 +19,11 @@ int _strlen(char *a)
 
 /**
  * *infinite_add - adds two numbers
+ * @n1: string
+ * @n2: string
+ * @r: string
+ * @size_r: int
+ * Return: 0
  * @n1: first number
  * @n2: second number
  * @r: buffer that stores result

@@ -5,7 +5,7 @@
  * print_buffer - prints a buffer
  * @b: pointer to string
  * @size: total number of bytes
- * Return: null
+ * Return: nothing
  */
 
 void print_buffer(char *b, int size)
@@ -27,7 +27,7 @@ void print_buffer(char *b, int size)
 		while (j < 10)
 		{
 			printf("%02x", b[i + j]);
-			if  ((j % 2 == 0 && j != 0) || (i + j > size - 1))
+			if  ((j % 2 == 0 && j != 0) || ((i + j) > (size - 1)))
 			{
 				printf(" ");
 			}
