@@ -10,30 +10,47 @@
 
 void print_buffer(char *b, int size)
 {
+	int o;
 	int i;
 	int j;
 
-	i = 0;
+	o = 0;
 	if (size <= 0)
 	{
 		printf("\n");
+		return;
 	}
 
-	while (i < size)
+	while (o < size)
 	{
-		printf("%8.8x:", i);
-		j = 0;
-
-		while (j < 10)
+		j = size - o < 10 ? size - o : 10;
+		printf("%08x: ", o);
+		for (i = 0; i < 10; i++)
 		{
-			printf("%02x", b[i + j]);
-			if  ((j % 2 == 0 && j != 0) || ((i + j) > (size - 1)))
+			if (i < j)
+			{
+				printf("%02x", *(b + o + i));
+			}
+			else
 			{
 				printf(" ");
 			}
-			j++;
+			if (i % 2)
+			{
+				printf(" ");
+			}
 		}
-		i += 10;
+		for (i = o; i < j; i++)
+		{
+			int c = *(b + o + i);
+			
+			if (c < 32 || c > 132)
+			{
+				c = '.';
+			}
+			printf("%c", c);
+		}
 		printf("\n");
+		o += 10;
 	}
 }
