@@ -12,7 +12,7 @@ int _strlen_recursion(char *s)
 
 	if (*s == '\0')
 	{
-		return (0);;
+		return (0);
 	}
 	else
 	{
@@ -35,7 +35,7 @@ int _scan(char *c, char *d)
 		return (0);
 	else if (c >= d)
 		return (1);
-	else 
+	else
 		return (_scan(c + 1, d - 1));
 }
 
