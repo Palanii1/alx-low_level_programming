@@ -5,6 +5,8 @@
  * or 0 if input interger is not prime number
  * @n: integer
  * Return: 1 if prime, 0 if not prime
+ */
+/**
  * prime_number - finds a prime number
  * @a: integer
  * @b: integer

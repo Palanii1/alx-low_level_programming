@@ -4,6 +4,8 @@
  * _sqrt_recursion - returns the natural square root of a number
  * @n: integer
  * Return: integer
+ */
+/**
  * natural_square_root - finds the natural square root of a number
  * @x: integer
  * @y: integer
