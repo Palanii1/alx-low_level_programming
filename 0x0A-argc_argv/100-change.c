@@ -5,6 +5,7 @@
  * main - entry
  * @argc: count of array argument
  * @argv: argument array
+ * Return: 0
  */
 
 int main(int argc, char *argv[])
