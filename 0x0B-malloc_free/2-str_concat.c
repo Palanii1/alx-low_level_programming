@@ -27,10 +27,10 @@ char *str_concat(char *s1, char *s2)
 	if (p == NULL)
 		return (NULL);
 	while (*s1)
-		{
-			p[c] = *s1++;
-			c += 1;
-		}
+	{
+		p[c] = *s1++;
+		c += 1;
+	}
 	while (*s2)
 	{
 		p[c] = *s2++;
