@@ -1,138 +1,84 @@
+#include "stdlib.h"
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 /**
- * _strcmp - former functions
- * @s1: string
- * @s2: string
- * Return: int
- */
-
-int _strcmp(char *s1, char *s2)
-{
-	int i = 0;
-
-	while (s1[i] != '\0' && s2[i] != '\0')
-	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-		i++;
-	}
-	return (0);
-}
-
-/**
- * _strlen - finds strings length
- * @s: string
- * @i: location
- * Return: lenght of string
- */
-
-int _strlen(char *s, int i)
-{
-	int count = 0;
-
-	while (s[i] != ' ' && s[i] != '\0')
-	{
-		count++;
-		i++;
-	}
-	return (count);
-}
-
-/**
- * words_count - determines count of words
+ * word_count - count words in a string
  * @str: string
- * Return: number of words
+ * Return: count
  */
 
-int words_count(char *str)
+int word_count(char *str)
 {
-	int count = 0, flag = 0;
+	int count = 0, flag = 0, i;
 
-	while (*str)
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (*str != ' ')
+		if (str[i] == ' ')
 		{
-			flag = 1;
-		}
-		else if (flag == 1)
-		{
-			count++;
 			flag = 0;
 		}
-		str++;
+		else if (flag == 0)
+		{
+			flag = 1;
+			count++;
+		}
 	}
 	return (count);
 }
 
 /**
- * _strcpy - copies elements of 1 string to another
- * @s: string
- * @i: position
- * @tmp: Array
- * Return: new array with elements
- */
-
-char *_strcpy(char *s, int i, char *tmp)
-{
-	int j;
-
-	for (j = 0; s[i] != ' ' && s[i] != '\0'; i++, j++)
-	{
-		tmp[j] = s[i];
-	}
-	tmp[j] = '\0';
-
-	return (tmp);
-}
-
-/**
- * strtow - splits a string into words
+ * strtow - splits string into words
  * @str: string
- * Return: Array of words
+ * Return: NULL if str == NULL or str == ""
  */
 
 char **strtow(char *str)
 {
-	int i = 0, j = 0, pos, t;
-	char **tmp;
+	char **matrix, *tmp;
 
-	if (str == NULL || _strcmp(str, "") || (words_count(str) == 0))
-	{
+	int i, k = 0, len = 0, words, c = 0, start, end;
+
+	while (*(str + len))
+		len++;
+	words = word_count(str);
+
+	if (words == 0)
 		return (NULL);
-	}
-	tmp = malloc(sizeof(int *) * (words_count(str) + 1));
-	if (tmp == NULL)
-	{
+
+	matrix = (char **) malloc(sizeof(char *) * (words + 1));
+
+	if (matrix == NULL)
 		return (NULL);
-	}
-	while (str[i])
+
+	for (i = 0; i <= len; i++)
 	{
-		if (str[i] != ' ')
+		if (str[i] == ' ' || str[i] == '\0')
 		{
-			pos = _strlen(str, i);
-			tmp[j] = malloc(sizeof(char) * (pos + 1));
-			if (tmp[j] == NULL)
+			if (c)
 			{
-				for (t = j; t >= 0; t--)
-				{
-					free(tmp[t]);
-				}
-				free(tmp);
-				return (NULL);
+				end = i;
+
+				tmp = (char *) malloc(sizeof(char) * (c + 1));
+
+				if (tmp == NULL)
+					return (NULL);
+
+				while (start < end)
+					*tmp++ = str[start++];
+				*tmp = '\0';
+
+				matrix[k] = tmp - c;
+
+				k++;
+
+				c = 0;
 			}
-			_strcpy(str, i, tmp[j]);
-			j++;
-			i += pos;
 		}
-		else
-		{
-			i++;
-		}
+		else if (c++ == 0)
+			start = i;
 	}
-	tmp[j] = NULL;
-	return (tmp);
+	matrix[k] = NULL;
+
+	return (matrix);
 }
 
