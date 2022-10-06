@@ -20,7 +20,7 @@ int find_len(char *str)
 
 /**
  * create_xarray - creates an array
- * @size: size pf array
+ * @size: size of array
  * Description: if space is insufficient, exit status 98
  * Return: pointer
  */
@@ -29,9 +29,7 @@ char *create_xarray(int size)
 {
 	char *array;
 	int index;
-
 	array = malloc(sizeof(char) * size);
-
 	if (array == NULL)
 		exit(98);
 	for (index = 0; index < (size - 1); index++)
@@ -125,7 +123,7 @@ void get_prod(char *prod, char *mult, int digit, int zeroes)
 
 void add_nums(char *final_prod, char *next_prod, int next_len)
 {
-	int num, tens = 0;\
+	int num, tens = 0;
 	while (*(final_prod + 1))
 		final_prod++;
 	while (*(next_prod + 1))
