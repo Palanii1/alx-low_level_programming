@@ -10,7 +10,9 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	const listint_t *f_ptr, *s_ptr;
-	size_t size = 0;
+	size_t size;
+
+	size = 0;
 
 	if (head == NULL)
 		return (0);
