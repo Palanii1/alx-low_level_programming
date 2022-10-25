@@ -9,3 +9,7 @@ Program 8 is a function that returns the nth node of a listint_t linked list.
 Program 9 is a function that returns the sum of all the data (n) of a listint_t linked list.
 Program 10 is a function that inserts a new node at a given position.
 Program 11 is a function that deletes the node at index index of a listint_t linked list
+Program 12 is a function that reverses a listint_t linked list.
+Program 13 is a function that prints a listint_t linked list.
+program 14 is a function that frees a listint_t list.
+Program 15 is a function that finds the loop in a linked list.
