@@ -14,7 +14,7 @@ int create_file(const char *filename, char *text_content)
 	if (!filename)
 		return (-1);
 
-	a = open (filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	a = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 
 	if (a < 0)
 		return (-1);
@@ -24,7 +24,7 @@ int create_file(const char *filename, char *text_content)
 		while (text_content[c])
 			c++;
 
-		b = write(c, text_content, c);
+		b = write(a, text_content, c);
 
 		if (b != c)
 			return (-1);
